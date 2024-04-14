@@ -28,9 +28,9 @@ if(arrdate.slice(0,1) == userInput || arrdate.slice(6,7) == userInput){
 
 //Q.5
 
-let Currentdate = new Date();
+var Currentdate = new Date();
 
-let dayOfMonth = Currentdate.getDate();
+var dayOfMonth = Currentdate.getDate();
 
 if(dayOfMonth < 16 ){
     document.write("<h1>First fifteen days of the month</h1>")
@@ -38,3 +38,33 @@ if(dayOfMonth < 16 ){
     document.write("<h1>Last Day of the month</h1>")
 }
 
+// Q.6
+var currentDate = new Date();
+
+document.write("Current Date : " + currentDate + "<br>")
+document.write("<br>");
+
+var milliScondSince = currentDate.getTime();
+
+document.write("Elapsed millisceonds since january 1 , 1970 : "+ milliScondSince + "<br>")
+document.write("<br>");
+
+
+var minutes = milliScondSince / (1000 * 60)
+document.write("Elapsed Minutes Since january  1 , 1970 : "+minutes + "<br>");
+
+
+//Q7
+
+var whether = new Date();
+
+
+
+var currentHour = whether.getHours();
+
+if(currentHour > 12){
+    document.write("It is AM");
+}else{
+    document.write("It is pM");
+
+}
